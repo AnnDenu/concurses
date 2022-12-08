@@ -1,0 +1,99 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <script>
+        <!--
+        function Complete()
+        {
+            var Elem="Регион: " + document.Sel1.Выбор региона.value +
+                "\nНаименование маршрута: " + document.Sel1.Name.value +
+                "\nПредполагаемые даты похода: " + document.Sel1.date.value +
+                "\nКоличество человек: " + document.Sel1.number.value+
+                "\nСтоимость: " + document.Sel1.price.value+
+                "\nВыбор дополнительных услуг: " + document.Sel1.dop.value+
+                "\nУслуги проводника: " + document.Sel1.provod.value+
+                "\nУслуги аренды туристического оборудования: " + document.Sel1.arenda.value+
+                "\nУслуги фотографа/видеооператора: " + document.Sel1.fotograf.value+
+                "\nСтрахование от несчастных случаев: " + document.Sel1.straxovanie.value+
+                "\nE-mail: " + document.Sel1.mail.value+
+                "\nКомментарий: " + document.Sel1.comment.value;
+            alert(Elem);
+        }
+        //-->
+    </script>
+</head>
+<body>
+<H1>Заполните анкету</H1>
+<form NAME="Sel1">
+    <!-- Анкета -->
+    <table>
+        <TR><TD><B>Регион:<B></TD>
+            <TD><select id="Выбор региона" style="margin-top: 20px;">
+                <option>Республика Алтай</option>
+                <option>Иркутская область</option>
+                <option>Краснодарский край</option>
+                </select></TD></TR>
+        <TR><TD><B>Наименование маршрута:<B></TD>
+            <TD><input NAME="Name" SIZE=20
+                  onBlur="this.value=this.value.toUpperCase()"></TD></TR>
+        <TR><TD><B>Предполагаемые даты похода:<B></TD>
+            <TD><input type="date" name="calendar" SIZE=20
+                onBlur="this.value=this.value.toUpperCase()"></TD></TR>
+        <TR><TD><B>Количество человек:<B></TD>
+            <TD><input type="number" атрибуты SIZE=20
+                    onBlur="this.value=this.value.toUpperCase()"></TD></TR>
+        <TR><TD><B>Стоимость:<B></TD>
+            <TD><input NAME="price" SIZE=20
+                    onBlur="this.value=this.value.toUpperCase()"></TD></TR>
+        <TR><TD><B>Выбор дополнительных услуг:<B></TD>
+            <TD><input NAME="dop" SIZE=20
+                    onBlur="this.value=this.value.toUpperCase()"></TD></TR>
+        <TR><TD><B>Услуги проводника:<B></TD>
+            <TD><input type="radio" id="contactChoice1"
+     name="provod" value="email" SIZE=20
+     onBlur="this.value=this.value.toUpperCase()">
+    <label for="contactChoice1">да</label>
+    <input type="radio" id="contactChoice1"
+    name="provod" value="email" SIZE=20
+    onBlur="this.value=this.value.toUpperCase()">
+   <label for="contactChoice1">нет</label></TD></TR>
+        <TR><TD><B>Услуги аренды туристического оборудования:<B></TD>
+            <TD><input type="radio" id="contactChoice1"
+                name="arenda" value="email" SIZE=20
+                onBlur="this.value=this.value.toUpperCase()">
+               <label for="contactChoice1">да</label>
+               <input type="radio" id="contactChoice1"
+               name="arenda" value="email" SIZE=20
+               onBlur="this.value=this.value.toUpperCase()">
+              <label for="contactChoice1">нет</label></TD></TR>
+        <TR><TD><B>Услуги фотографа/видеооператора:<B></TD>
+            <TD><input type="radio" id="contactChoice1"
+                name="fotograf" value="email" SIZE=20
+                onBlur="this.value=this.value.toUpperCase()">
+               <label for="contactChoice1">да</label>
+               <input type="radio" id="contactChoice1"
+               name="fotograf" value="email" SIZE=20
+               onBlur="this.value=this.value.toUpperCase()">
+              <label for="contactChoice1">нет</label></TD></TR>
+        <TR><TD><B>Страхование от несчастных случаев:<B></TD>
+            <TD><input type="radio" id="contactChoice1"
+                name="straxovanie" value="email" SIZE=20
+                onBlur="this.value=this.value.toUpperCase()">
+               <label for="contactChoice1">да</label>
+               <input type="radio" id="contactChoice1"
+               name="straxovanie" value="email" SIZE=20
+               onBlur="this.value=this.value.toUpperCase()">
+              <label for="contactChoice1">нет</label></TD></TR>
+        <TR><TD><B>E-mail:<B></TD>
+            <TD><input NAME="mail" SIZE=20
+                    onBlur="this.value=this.value.toUpperCase()"></TD></TR>
+                    <TR><TD><B>Комментарий:<B></TD>
+                        <TD><textarea name="comment" cols="40" rows="3"></textarea></p>
+</TD></TR>
+    <!-- Кнопки готовности и сброса -->
+    </table>
+    <input TYPE="button" VALUE="Готово" onClick="Complete();">
+    <input TYPE="reset" VALUE="Сброс">
+</form>
+</body>
+</html>
